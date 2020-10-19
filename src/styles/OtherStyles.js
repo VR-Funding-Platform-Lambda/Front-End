@@ -5,11 +5,17 @@ export const HeaderStyle = styled.div`
   align-self: flex-start;
   align-items: center;
   justify-content: space-between;
+  margin: 0;
   padding: 1% 2%;
   height: 55px;
+  background: #342450;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: ghostwhite;
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+  }
 `;
 
 export const ListingStyle = styled.div`
@@ -22,6 +28,7 @@ export const ListingStyle = styled.div`
 export const CardStyle = styled.div`
   width: 500px;
   height: 600px;
+  margin: 2%2rem;
   padding: 40px;
   margin-bottom: 2%;
   box-sizing: border-box;

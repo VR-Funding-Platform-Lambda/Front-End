@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 import LoginForm from './components/LoginForm'
 import SignUpForm from './components/SignupForm';
+import {HeaderStyle} from './styles/OtherStyles'
 
 
 
@@ -12,11 +13,11 @@ import SignUpForm from './components/SignupForm';
           <div className="App">
             <div className="App__Aside"></div>
             <div className="App__Form">
-              <div className="PageSwitcher">
+              <HeaderStyle className="PageSwitcher">
                 <a href='https://keen-tereshkova-146593.netlify.app/#'>Home Page</a>
                 <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
                 <NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
-              </div>
+              </HeaderStyle>
               <Route exact path="/" component={SignUpForm}>
               </Route>
               <Route path="/sign-in" component={LoginForm}>

@@ -1,44 +1,47 @@
 import React, {useState, useEffect} from 'react'
+import {CardStyle, ListingStyle, FormStyle} from '../styles/OtherStyles'
+import VRGoggles from '../assets/vr-glasses.png'
 
 // REMOVE <BR /> TAGS WHEN YOU GET TO STYLING
 
 const initialFormValues = {
   username: '',
   password: ''
-}
+};
+
 const initialErrors = {
   username: '',
   password: ''
-}
+};
+
+const onSubmit = (event) => {
+  event.preventDefault();
+};
 
 export default function Login() {
-  const [formValues, setFormValues] = useState(initialFormValues)
-  const [errors, setErrors] = useState(initialErrors)
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const [errors, setErrors] = useState(initialErrors);
 
   return (
-    <div>
-      <nav>
-        <a href='https://keen-tereshkova-146593.netlify.app/#'>SIXR VR Funding</a>
-      </nav>
-      <form>
-        <h2>Login</h2>
-        <label>
+    <ListingStyle>
+      <CardStyle>
+        <FormStyle onSubmit={onSubmit}>
+          <img src={VRGoggles} alt='Person wearing a VR Headset' />
+          <h2>Login</h2>
           <input 
             type='text'
-            name='username'
-            placeholder='username'
+            name='email'
+            placeholder='Enter your email'
           />
-        </label><br />
-        <label>
           <input 
-            type='text'
+            type='password'
             name='password'
-            placeholder='password'
+            placeholder='Enter your password'
           />
-        </label><br />
-        <button>Login</button><br />
-        <button>Not Registered? Sign Up</button>
-      </form>
-    </div>
+          <button>Login</button>
+          <button>Not Registered? Sign Up</button>
+        </FormStyle>
+      </CardStyle>
+    </ListingStyle>
   )
-}
+};

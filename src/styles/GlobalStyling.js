@@ -1,7 +1,7 @@
 import {createGlobalStyle} from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  color: blueviolet
+  color: blueviolet;
 `;
 
 export default GlobalStyle;

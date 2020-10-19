@@ -17,6 +17,9 @@ export default function Login() {
 
   return (
     <div>
+      <nav>
+        <a href='https://keen-tereshkova-146593.netlify.app/#'>SIXR VR Funding</a>
+      </nav>
       <form>
         <h2>Login</h2>
         <label>

@@ -79,9 +79,9 @@ class SignUpForm extends Component {
                 </label>
               </div>
 
-              <div>
+              
                   <button>Sign Up</button> <Link to="/sign-in">I'm already member</Link>
-              </div>
+              
             </form>
           </div>
         );

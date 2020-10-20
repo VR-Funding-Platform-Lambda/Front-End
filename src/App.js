@@ -11,9 +11,11 @@ import {HeaderStyle} from './styles/OtherStyles'
       return (
         <Router>
           <div className="App">
-            
+          <HeaderStyle className="PageSwitcher">
+                <a href='https://keen-tereshkova-146593.netlify.app/#'>Home Page</a>         
                 <NavLink to="/sign-in">Sign In</NavLink>
-                <NavLink exact to="/" >Sign Up</NavLink>
+              <NavLink exact to="/" >Sign Up</NavLink>
+              </HeaderStyle>
               </div>  
               <Route exact path="/" component={SignUpForm}>
               </Route>

@@ -8,21 +8,18 @@ import SignUpForm from './Components/SignupForm';
   class App extends Component {
     render() {
       return (
-        <Router basename="/react-auth-ui/">
+        <Router>
           <div className="App">
-            <div className="App__Aside"></div>
-            <div className="App__Form">
-              <div className="PageSwitcher">
-                <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-                <NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+                         
+                <NavLink to="/sign-in">Sign In</NavLink>
+                <NavLink exact to="/" >Sign Up</NavLink>
               </div>  
               <Route exact path="/" component={SignUpForm}>
               </Route>
               <Route path="/sign-in" component={LoginForm}>
               </Route>
-            </div>
+            
   
-          </div>
         </Router>
       );
     }

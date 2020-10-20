@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 // REMOVE <BR /> TAGS WHEN YOU GET TO STYLING
 
@@ -34,7 +35,7 @@ export default function Login() {
           />
         </label><br />
         <button>Login</button><br />
-        <button>Not Registered? Sign Up</button>
+        <Link to="/">Not Registered? Sign Up</Link>
       </form>
     </div>
   )

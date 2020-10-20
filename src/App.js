@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
-import LoginForm from './Components/LoginForm'
-import SignUpForm from './Components/SignupForm';
+import LoginForm from './components/LoginForm'
+import SignUpForm from './components/SignupForm';
+import {HeaderStyle} from './styles/OtherStyles'
 
 
 
@@ -10,9 +11,11 @@ import SignUpForm from './Components/SignupForm';
       return (
         <Router>
           <div className="App">
-                       
+          <HeaderStyle className="PageSwitcher">
+                <a href='https://keen-tereshkova-146593.netlify.app/#'>Home Page</a>         
                 <NavLink to="/sign-in">Sign In</NavLink>
-                <NavLink exact to="/" >Sign Up</NavLink>
+              <NavLink exact to="/" >Sign Up</NavLink>
+              </HeaderStyle>
               </div>  
               <Route exact path="/" component={SignUpForm}>
               </Route>

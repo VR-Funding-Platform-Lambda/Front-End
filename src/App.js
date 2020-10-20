@@ -10,7 +10,7 @@ import SignUpForm from './Components/SignupForm';
       return (
         <Router>
           <div className="App">
-                         
+                       
                 <NavLink to="/sign-in">Sign In</NavLink>
                 <NavLink exact to="/" >Sign Up</NavLink>
               </div>  

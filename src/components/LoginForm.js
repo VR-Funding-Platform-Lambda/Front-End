@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {CardStyle, ListingStyle, FormStyle} from '../styles/OtherStyles'
 import VRGoggles from '../assets/vr-glasses.png'
+import {Link} from 'react-router-dom'
 
 // REMOVE <BR /> TAGS WHEN YOU GET TO STYLING
 
@@ -39,7 +40,7 @@ export default function Login() {
             placeholder='Enter your password'
           />
           <button>Login</button>
-          <button>Not Registered? Sign Up</button>
+          <Link to='/'><button>Not Registered? Sign Up</button></Link>
         </FormStyle>
       </CardStyle>
     </ListingStyle>

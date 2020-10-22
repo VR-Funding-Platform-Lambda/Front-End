@@ -44,7 +44,8 @@ class SignUpForm extends Component {
         <ListingStyle>
           <CardStyle>
             <FormStyle onSubmit={this.submit}>
-              <img src="https://media0.giphy.com/media/fo7R6EzlBljboCcICa/giphy.gif?cid=ecf05e470rv32olirqgwi9cfsu2nn56xe9ayhjz3achqv82a&rid=giphy.gif" alt="VR animation"></img>
+              <img className="visual" src="https://media2.giphy.com/media/26FPAn6hPp6Fqx7qw/giphy.gif?cid=ecf05e476b1wz1xxmozxt8rnci5wz2s5cafgj4fggmqi8ery&rid=giphy.gif" alt="VR"></img>
+              <img className="visual" src="https://media1.giphy.com/media/3o7buctdzCPP4d7ZMk/giphy.gif?cid=ecf05e47htcg71bogfk89j5l1l7ed4wjgpxc3gfd89j6ux88&rid=giphy.gif" alt="VR2"></img>
               <div >
                 <h2>Sign Up!</h2>
                 <label htmlFor="name">Full Name</label>

@@ -75,3 +75,5 @@ export const Button2 = styled.button`
 export const Errors = styled.div`
   color: red;
 `
+
+

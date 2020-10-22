@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {CardStyle, ListingStyle, FormStyle} from '../styles/OtherStyles'
+import {CardStyle, ListingStyle, FormStyle, Button1} from '../styles/OtherStyles'
 import VRGoggles from '../assets/vr-glasses.png'
 import {Link} from 'react-router-dom'
 import * as yup from 'yup'
@@ -42,7 +42,6 @@ export default function Login() {
         })
         .catch((err) => {
           setErrors({...errors, [name]: err.errors[0]})
-          console.log(err.errors[0])
         })
       setFormValues({...formValues, [name]: value})
     }
@@ -60,7 +59,7 @@ export default function Login() {
       <CardStyle>
         <FormStyle onSubmit={onSubmit}>
           <img src={VRGoggles} alt='Person wearing a VR Headset' />
-          <h2>Login</h2>
+          <h2 style={{margin: '1rem', padding: '1rem'}}>Login</h2>
           <input 
             type='email'
             name='email'
@@ -76,8 +75,8 @@ export default function Login() {
             onChange={change}
           />
 
-          <button disabled={disabled}>Login</button>
-          <Link to='/'><button>Not Registered? <br />Sign Up</button></Link>
+          <Button1 disabled={disabled} id='submit'>Login</Button1>
+          <Link to='/'><Button1 style={{marginRight: '0.4rem'}} id='register'>Not Registered? Sign Up</Button1></Link>
           <div>
             <div>{errors.email}</div>
             <div>{errors.password}</div>

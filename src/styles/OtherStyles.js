@@ -8,12 +8,17 @@ export const HeaderStyle = styled.div`
   margin: 0;
   padding: 1% 2%;
   height: 55px;
-  background: #342450;
+  background: #312450;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+  }
   a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 2rem;
   }
 `;
@@ -28,9 +33,9 @@ export const ListingStyle = styled.div`
 export const CardStyle = styled.div`
   width: 500px;
   height: 600px;
-  margin: 2%2rem;
+  margin-top: 3%;
   padding: 40px;
-  margin-bottom: 2%;
+  margin-bottom: 5%;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -51,9 +56,18 @@ export const FormStyle = styled.form`
     text-decoration: underline;
   }
   input {
-    margin: 1%;
+    margin: 1.5%;
   }
   button {
-    margin: 1%;
+    margin: 1.5%;
   }
+`
+
+export const Button1 = styled.button`
+  border-radius: 10px;
+  width: 11rem;
+`
+
+export const Button2 = styled.button`
+  border-radius: 10px;
 `

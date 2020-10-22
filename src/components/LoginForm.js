@@ -75,8 +75,8 @@ export default function Login() {
             onChange={change}
           />
 
-          <Button1 disabled={disabled}>Login</Button1>
-          <Link to='/'><Button1 style={{marginRight: '0.4rem'}}>Not Registered? Sign Up</Button1></Link>
+          <Button1 disabled={disabled} id='submit'>Login</Button1>
+          <Link to='/'><Button1 style={{marginRight: '0.4rem'}} id='register'>Not Registered? Sign Up</Button1></Link>
           <div>
             <div>{errors.email}</div>
             <div>{errors.password}</div>

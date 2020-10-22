@@ -5,4 +5,5 @@ const loginSchema = yup.object().shape({
     password: yup.string().min(6,'Please enter a valid password').required('Please enter a password')
 });
 
+
 export default loginSchema;

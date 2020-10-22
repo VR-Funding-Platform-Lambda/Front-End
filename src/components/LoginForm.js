@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {CardStyle, ListingStyle, FormStyle, Button1} from '../styles/OtherStyles'
+import {CardStyle, ListingStyle, FormStyle, Button1, Errors} from '../styles/OtherStyles'
 import VRGoggles from '../assets/vr-glasses.png'
 import {Link} from 'react-router-dom'
 import * as yup from 'yup'
@@ -77,10 +77,10 @@ export default function Login() {
 
           <Button1 disabled={disabled} id='submit'>Login</Button1>
           <Link to='/'><Button1 style={{marginRight: '0.4rem'}} id='register'>Not Registered? Sign Up</Button1></Link>
-          <div>
+          <Errors>
             <div>{errors.email}</div>
             <div>{errors.password}</div>
-          </div>
+          </Errors>
         </FormStyle>
       </CardStyle>
     </ListingStyle>

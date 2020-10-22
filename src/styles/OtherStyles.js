@@ -71,3 +71,7 @@ export const Button1 = styled.button`
 export const Button2 = styled.button`
   border-radius: 10px;
 `
+
+export const Errors = styled.div`
+  color: red;
+`

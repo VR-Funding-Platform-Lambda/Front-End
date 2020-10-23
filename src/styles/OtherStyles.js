@@ -32,7 +32,7 @@ export const ListingStyle = styled.div`
 
 export const CardStyle = styled.div`
   width: 500px;
-  height: 600px;
+  height: 700px;
   margin-top: 3%;
   padding: 40px;
   margin-bottom: 5%;

@@ -2,9 +2,19 @@ import React, { Component} from 'react';
 import { Link } from 'react-router-dom';
 import {CardStyle, ListingStyle, FormStyle} from '../styles/OtherStyles'
 
-
+const initialState = {
+  email: '',
+  password: '',
+  name: '',
+  checked: false,
+  nameError: '',
+  emailError: '',
+  passwordError:''
+}
 
 class SignUpForm extends Component {
+
+  state = initialState;
 
   constructor() {
     super();
@@ -13,7 +23,10 @@ class SignUpForm extends Component {
       email: '',
       password: '',
       name: '',
-      checked: false
+      checked: false,
+      nameError: '',
+      emailError: '',
+      passwordError: ''
     };
       
       
@@ -31,12 +44,40 @@ class SignUpForm extends Component {
     });
   }
  
+  validate = () => {
+    let nameError = ''
+      let emailError = ''
+    let passwordError = ''
+    
+    if (!this.state.name) {
+      nameError = 'name can not be blank!'
+    }
+
+    if (!this.state.email.includes('@')) {
+      emailError='invalid email!'
+    }
+
+    if (!this.state.password.includes('*'||'@'||'$')) {
+    passwordError='password needs a special character!'  
+    }
+
+
+    if (emailError || nameError || passwordError) {
+      this.setState({ emailError, nameError, passwordError })
+      return false;
+    }
+    return true
+  }
   
   submit(e) {
     e.preventDefault();
-    console.log(this.state);
-  
-}
+    const isValid = this.validate();
+    if (isValid) {
+      console.log(this.state);
+      //this will clear the form
+      this.setState(initialState)
+    }
+  }
 
 
     render() {
@@ -55,6 +96,7 @@ class SignUpForm extends Component {
                   name="name"
                   value={this.state.name}
                   onChange={this.change} />
+                <div style={{fontSize:12,color:'yellow'}}>{this.state.nameError}</div>
               </div>
               <div>
                 <label htmlFor="password">Password</label>
@@ -65,6 +107,7 @@ class SignUpForm extends Component {
                   name="password"
                   value={this.state.password}
                   onChange={this.change} />
+                <div style={{fontSize:12,color:'yellow'}}>{this.state.passwordError}</div>
               </div>
               <div>
                 <label htmlFor="email">E-Mail Address</label>
@@ -75,6 +118,7 @@ class SignUpForm extends Component {
                   name="email"
                   value={this.state.email}
                   onChange={this.change} />
+                <div style={{fontSize:12,color:'yellow'}}>{this.state.emailError}</div>
               </div>
 
               <div>
@@ -84,7 +128,8 @@ class SignUpForm extends Component {
                     name="checked"
                     value={this.state.hasAgreed}
                     onChange={this.change} />
-                    I agree to all statements in terms of service
+                  <div style={{fontSize:15}}> I agree to the terms and conditions.</div>
+                
                 </label>
               </div>
 

@@ -76,6 +76,3 @@ export const Errors = styled.div`
   color: red;
 `
 
-.visual = styled.div`
-  width: 900%;
-`;
